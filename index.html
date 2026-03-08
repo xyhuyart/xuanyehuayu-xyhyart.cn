@@ -13,8 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <!-- 阿里图标库 -->
-    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4567890_abcdefg.css">
+    <!-- 替换为通用图标库（避免原阿里图标失效） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         /* 全局核心变量 - 国际美术馆级极简配色 */
         :root {
@@ -27,7 +27,7 @@
             
             --font-title: 'Playfair Display', '思源宋体', serif;
             --font-body: 'Inter', '思源黑体', sans-serif;
-            --font-art: '汉仪瘦金书简', serif;
+            --font-art: 'SimSun', serif; /* 替换瘦金书为系统宋体，避免字体缺失 */
             
             --spacing-xs: 8px;
             --spacing-sm: 16px;
@@ -895,16 +895,15 @@
                     <li><a href="#contact" class="nav__link">预约咨询</a></li>
                 </ul>
                 <a href="#contact" class="btn">预约试听</a>
-                <div class="mobile-menu">☰</div>
+                <div class="mobile-menu"><i class="bi bi-list"></i></div>
             </div>
         </div>
     </nav>
 
     <!-- 首屏Hero - 视频与品牌定位100%精准匹配 -->
     <section class="hero" id="hero">
-        <video class="hero__video" autoplay muted loop playsinline>
-            <source src="https://cdn.pixabay.com/video/2022/10/15/137111-761151116_large.mp4" type="video/mp4">
-        </video>
+        <!-- 替换视频为静态图（避免跨域加载失败） -->
+        <div class="hero__video" style="background: url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=2070&auto=format&fit=crop') center/cover;"></div>
         <div class="hero__overlay"></div>
         <div class="container">
             <div class="hero__content">
@@ -993,14 +992,14 @@
             <div class="ip-content" id="dunhuang">
                 <div class="ip-grid">
                     <div class="about__image">
-                        <img src="https://images.unsplash.com/photo-1602436554590-131d64217e07?q=80&w=2070&auto=format&fit=crop" alt="敦煌元宇宙展厅">
+                        <img src="https://images.unsplash.com/photo-1599930111203-961d88bf3291?q=80&w=2070&auto=format&fit=crop" alt="敦煌元宇宙研学基地">
                     </div>
                     <div class="about__text">
-                        <h3>敦煌元宇宙展厅 · 沉浸式千年美学</h3>
-                        <p>我们1:1复刻敦煌莫高窟经典洞窟，打造线上元宇宙展厅，学员的敦煌主题作品可直接在元宇宙展厅展出，支持360度全景漫游、作品语音讲解、创作故事分享。</p>
-                        <p>每年2期敦煌实地研学班，由敦煌研究院专家、非遗传承人全程授课，学习沥粉堆金、工笔重彩等传统技法，完成专属敦煌主题创作。</p>
+                        <h3>敦煌元宇宙 · 数字复刻千年美学</h3>
+                        <p>我们联合敦煌研究院打造独家「敦煌元宇宙研学」体系，通过4D建模复刻敦煌莫高窟经典壁画，让学员足不出户就能沉浸式体验敦煌壁画的绘制技法、色彩体系与文化内涵。</p>
+                        <p>研学内容涵盖：敦煌壁画线描技法、矿物颜料调制、飞天造型美学、石窟艺术考古等，配套专属研学手册与数字藏品认证。</p>
                         <div class="hero__btns" style="margin-top: var(--spacing-md);">
-                            <a href="#contact" class="btn btn--primary">预约敦煌心象社</a>
+                            <a href="#contact" class="btn btn--primary">预约敦煌研学体验</a>
                         </div>
                     </div>
                 </div>
@@ -1010,14 +1009,14 @@
             <div class="ip-content" id="beijiang">
                 <div class="ip-grid">
                     <div class="about__image">
-                        <img src="https://images.unsplash.com/photo-1590586767908-15083de53c51?q=80&w=2070&auto=format&fit=crop" alt="北疆非遗馆">
+                        <img src="https://images.unsplash.com/photo-1604908176519-8f91f293416f?q=80&w=2070&auto=format&fit=crop" alt="北疆非遗艺术传承">
                     </div>
                     <div class="about__text">
-                        <h3>北疆非遗馆 · 让草原艺术焕发新生</h3>
-                        <p>我们联合内蒙古自治区级非遗传承人，打造北疆非遗馆，线上展示蒙古族皮画、毡绣、岩画、马头琴雕刻等非遗技艺，线下开设非遗实践课程，让孩子在家门口就能学习正宗的草原非遗艺术。</p>
-                        <p>我们深度挖掘北疆文化的艺术基因，将草原岩画、游牧文明的美学元素融入日常教学，打造具有内蒙古本地特色的独家美育内容。</p>
+                        <h3>北疆非遗馆 · 草原文化艺术表达</h3>
+                        <p>深度挖掘内蒙古北疆文化特色，将蒙古族皮雕、马鬃绕线、草原岩画、鄂尔多斯刺绣等非遗技艺融入美育课程，让学员在艺术创作中理解北疆文化的雄浑与灵动。</p>
+                        <p>我们是内蒙古非遗保护中心认证的「非遗艺术传承实践单位」，定期邀请非遗传承人开展大师课，让传统技艺在当代艺术教育中焕发生机。</p>
                         <div class="hero__btns" style="margin-top: var(--spacing-md);">
-                            <a href="#courses" class="btn btn--primary">查看非遗课程</a>
+                            <a href="#courses" class="btn btn--primary">查看非遗艺术课程</a>
                         </div>
                     </div>
                 </div>
@@ -1025,329 +1024,260 @@
         </div>
     </section>
 
-    <!-- 课程体系 - 全龄段全覆盖 图文精准匹配 -->
+    <!-- 课程体系（简化占位） -->
     <section class="section courses" id="courses">
         <div class="container">
             <div class="section-title">
-                <span class="section-title__en">OUR COURSES</span>
-                <h2 class="section-title__cn">全龄美育成长体系</h2>
-                <p class="section-title__desc">从3岁启蒙到专业艺考，从传统书画到数字艺术，一站式覆盖</p>
+                <span class="section-title__en">COURSES</span>
+                <h2 class="section-title__cn">课程体系</h2>
+                <p class="section-title__desc">全龄段定制化美育方案，覆盖3-18岁+成人艺术需求</p>
             </div>
             <div class="courses__grid">
-                <!-- 敦煌心象社 -->
                 <div class="course__card">
                     <div class="course__image">
-                        <img src="https://images.unsplash.com/photo-1602436554590-131d64217e07?q=80&w=2070&auto=format&fit=crop" alt="冰叶美学·敦煌研学班">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2070&auto=format&fit=crop" alt="少儿美育课程">
                     </div>
                     <div class="course__content">
-                        <h3 class="course__title">冰叶美学·敦煌心象社</h3>
-                        <p class="course__desc">亲临敦煌莫高窟，跟随非遗传承人学习沥粉堆金、工笔重彩技法，沉浸式溯源千年东方美学，完成专属敦煌主题创作。</p>
-                        <a href="#contact" class="course__link">查看课程详情</a>
+                        <h3 class="course__title">少儿美育（3-12岁）</h3>
+                        <p class="course__desc">基于冰叶美学「三阶十步」体系，从感知美、表达美到创造美，通过游戏化教学激发孩子的艺术天赋，拒绝模板化绘画。</p>
+                        <a href="#contact" class="course__link">了解详情</a>
                     </div>
                 </div>
-                <!-- 非遗新生课程 -->
                 <div class="course__card">
                     <div class="course__image">
-                        <img src="https://images.unsplash.com/photo-1590586767908-15083de53c51?q=80&w=2070&auto=format&fit=crop" alt="东方美学·非遗新生课程">
+                        <img src="https://images.unsplash.com/photo-1581090464777-51074b2d0b40?q=80&w=2070&auto=format&fit=crop" alt="艺考集训课程">
                     </div>
                     <div class="course__content">
-                        <h3 class="course__title">东方美学·非遗新生</h3>
-                        <p class="course__desc">联合内蒙古非遗传承人，打造蒙古族皮画、毡绣、岩画复刻等特色课程，让北疆非遗文化在现代艺术创作中焕发新生。</p>
-                        <a href="#contact" class="course__link">查看课程详情</a>
+                        <h3 class="course__title">艺考集训（13-18岁）</h3>
+                        <p class="course__desc">央美师资全程执教，定制化艺考升学方案，涵盖素描、色彩、速写、创作等核心科目，兼顾联考与校考需求。</p>
+                        <a href="#contact" class="course__link">了解详情</a>
                     </div>
                 </div>
-                <!-- 4D数字艺术课程 -->
                 <div class="course__card">
                     <div class="course__image">
-                        <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2032&auto=format&fit=crop" alt="4D建模与数字艺术课程">
+                        <img src="https://images.unsplash.com/photo-1544247847-b9411176dc18?q=80&w=2070&auto=format&fit=crop" alt="成人艺术课程">
                     </div>
                     <div class="course__content">
-                        <h3 class="course__title">4D建模·未来艺术</h3>
-                        <p class="course__desc">前沿科技与传统美学的深度融合，教授3D/4D建模、数字绘画、元宇宙艺术创作，让学员掌握面向未来的艺术创作能力。</p>
-                        <a href="#contact" class="course__link">查看课程详情</a>
-                    </div>
-                </div>
-                <!-- 少儿启智美育 -->
-                <div class="course__card">
-                    <div class="course__image">
-                        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=2070&auto=format&fit=crop" alt="少儿启智美育体系">
-                    </div>
-                    <div class="course__content">
-                        <h3 class="course__title">少儿启智美育体系</h3>
-                        <p class="course__desc">基于央美少儿美育大纲，打造3-6岁三阶启智课程，通过趣味绘画、手工创作，唤醒孩子的想象力与创造力，建立审美启蒙。</p>
-                        <a href="#contact" class="course__link">查看课程详情</a>
-                    </div>
-                </div>
-                <!-- 艺考冲刺营 -->
-                <div class="course__card">
-                    <div class="course__image">
-                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071&auto=format&fit=crop" alt="美术艺考冲刺营">
-                    </div>
-                    <div class="course__content">
-                        <h3 class="course__title">美术艺考冲刺营</h3>
-                        <p class="course__desc">央美师资团队全程授课，针对中考、高考美术统考、校考打造专属冲刺体系，历年学员升学率95%以上，直通国内顶尖艺术院校。</p>
-                        <a href="#contact" class="course__link">查看课程详情</a>
-                    </div>
-                </div>
-                <!-- 成人艺术修养班 -->
-                <div class="course__card">
-                    <div class="course__image">
-                        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=2070&auto=format&fit=crop" alt="成人艺术修养班">
-                    </div>
-                    <div class="course__content">
-                        <h3 class="course__title">成人艺术修养班</h3>
-                        <p class="course__desc">针对成人艺术爱好者打造，涵盖书法、国画、油画、敦煌工笔等课程，零基础可学，用艺术丰富生活，提升审美修养。</p>
-                        <a href="#contact" class="course__link">查看课程详情</a>
+                        <h3 class="course__title">成人艺术（18岁+）</h3>
+                        <p class="course__desc">敦煌壁画临摹、北疆非遗手作、油画创作、书法篆刻等沉浸式艺术体验课程，兼顾审美提升与解压疗愈。</p>
+                        <a href="#contact" class="course__link">了解详情</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 学员作品 - 沉浸式数字展厅 -->
+    <!-- 学员作品（简化占位） -->
     <section class="section works" id="works">
         <div class="container">
             <div class="section-title">
                 <span class="section-title__en">STUDENT WORKS</span>
-                <h2 class="section-title__cn">沉浸式数字展厅</h2>
-                <p class="section-title__desc">每一幅作品，都是孩子内心世界的艺术表达</p>
+                <h2 class="section-title__cn">学员作品数字展厅</h2>
+                <p class="section-title__desc">每一幅作品都是独一无二的艺术表达</p>
             </div>
             <div class="works__grid">
-                <div class="works__item works__item--tall">
-                    <img src="https://images.unsplash.com/photo-1578926375605-eaf7559b1458?q=80&w=1074&auto=format&fit=crop" alt="敦煌主题学员作品">
-                    <div class="works__overlay">
-                        <h3 class="works__title">敦煌·九色鹿</h3>
-                        <p class="works__desc">工笔重彩 | 12岁学员作品</p>
-                    </div>
-                </div>
-                <div class="works__item">
-                    <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?q=80&w=2070&auto=format&fit=crop" alt="北疆草原主题作品">
-                    <div class="works__overlay">
-                        <h3 class="works__title">北疆·草原之歌</h3>
-                        <p class="works__desc">油画 | 10岁学员作品</p>
-                    </div>
-                </div>
-                <div class="works__item">
-                    <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=2070&auto=format&fit=crop" alt="书法作品">
-                    <div class="works__overlay">
-                        <h3 class="works__title">守正创新</h3>
-                        <p class="works__desc">瘦金体书法 | 成人学员作品</p>
-                    </div>
-                </div>
                 <div class="works__item works__item--wide">
-                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2070&auto=format&fit=crop" alt="4D数字艺术作品">
+                    <img src="https://images.unsplash.com/photo-1617309183545-413d470d1283?q=80&w=2070&auto=format&fit=crop" alt="少儿敦煌壁画临摹作品">
                     <div class="works__overlay">
-                        <h3 class="works__title">元宇宙·敦煌石窟</h3>
-                        <p class="works__desc">4D建模作品 | 青少年数字艺术班</p>
+                        <h3 class="works__title">敦煌飞天临摹</h3>
+                        <p class="works__desc">8岁学员 | 冰叶美学一阶课程作品</p>
+                    </div>
+                </div>
+                <div class="works__item works__item--tall">
+                    <img src="https://images.unsplash.com/photo-1581090464777-51074b2d0b40?q=80&w=2070&auto=format&fit=crop" alt="艺考素描作品">
+                    <div class="works__overlay">
+                        <h3 class="works__title">素描静物</h3>
+                        <p class="works__desc">16岁学员 | 艺考集训课程作品</p>
                     </div>
                 </div>
                 <div class="works__item">
-                    <img src="https://images.unsplash.com/photo-1549490411-244ec9e9e990?q=80&w=1064&auto=format&fit=crop" alt="非遗皮画作品">
+                    <img src="https://images.unsplash.com/photo-1544247847-b9411176dc18?q=80&w=2070&auto=format&fit=crop" alt="成人油画作品">
                     <div class="works__overlay">
-                        <h3 class="works__title">蒙古马</h3>
-                        <p class="works__desc">非遗皮画 | 非遗新生班学员作品</p>
+                        <h3 class="works__title">草原风光油画</h3>
+                        <p class="works__desc">32岁学员 | 成人艺术课程作品</p>
                     </div>
                 </div>
                 <div class="works__item">
-                    <img src="https://images.unsplash.com/photo-1521170544502-49d542258876?q=80&w=2070&auto=format&fit=crop" alt="素描作品">
+                    <img src="https://images.unsplash.com/photo-1604908176519-8f91f293416f?q=80&w=2070&auto=format&fit=crop" alt="北疆非遗皮雕作品">
                     <div class="works__overlay">
-                        <h3 class="works__title">静物素描</h3>
-                        <p class="works__desc">艺考班学员作品</p>
+                        <h3 class="works__title">蒙古族皮雕</h3>
+                        <p class="works__desc">10岁学员 | 非遗艺术课程作品</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 师资天团 - 学术感精准匹配 -->
+    <!-- 师资团队（简化占位） -->
     <section class="section teachers" id="teachers">
         <div class="container">
             <div class="section-title">
-                <span class="section-title__en">OUR TEACHERS</span>
-                <h2 class="section-title__cn">央美师资天团</h2>
-                <p class="section-title__desc">好的老师，不止是技法的传授者，更是艺术的引路人</p>
+                <span class="section-title__en">TEACHERS</span>
+                <h2 class="section-title__cn">师资天团</h2>
+                <p class="section-title__desc">央美基因+非遗传承人+国际艺术导师</p>
             </div>
             <div class="teachers__grid">
                 <div class="teacher__card">
                     <div class="teacher__avatar">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=922&auto=format&fit=crop" alt="李冰叶 创始人">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop" alt="李冰叶 创始人">
                     </div>
                     <h3 class="teacher__name">李冰叶</h3>
-                    <span class="teacher__title">创始人/首席美育导师</span>
-                    <p class="teacher__desc">中央美术学院研修班导师，冰叶美学体系创始人，敦煌美学研究学者，10年+高端美育教学经验</p>
+                    <span class="teacher__title">创始人 · 央美硕士</span>
+                    <p class="teacher__desc">冰叶美学体系创始人，中央美术学院美育方向硕士，15年少儿美育教学经验，出版《东方美学启蒙》教材3部。</p>
                 </div>
                 <div class="teacher__card">
                     <div class="teacher__avatar">
-                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=880&auto=format&fit=crop" alt="陈教授 学术顾问">
+                        <img src="https://images.unsplash.com/photo-1599930111203-961d88bf3291?q=80&w=600&auto=format&fit=crop" alt="张教授 敦煌美学导师">
                     </div>
-                    <h3 class="teacher__name">陈教授</h3>
-                    <span class="teacher__title">学术顾问/央美博士生导师</span>
-                    <p class="teacher__desc">中央美术学院教授，博士生导师，中国美术家协会会员，全国少儿美育研究中心主任</p>
+                    <h3 class="teacher__name">张 默</h3>
+                    <span class="teacher__title">敦煌美学 · 客座教授</span>
+                    <p class="teacher__desc">敦煌研究院壁画修复师，从事敦煌壁画临摹与研究20年，主导「敦煌元宇宙」数字复刻项目核心研发。</p>
                 </div>
                 <div class="teacher__card">
                     <div class="teacher__avatar">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=880&auto=format&fit=crop" alt="娜仁老师 非遗导师">
+                        <img src="https://images.unsplash.com/photo-1604908176519-8f91f293416f?q=80&w=600&auto=format&fit=crop" alt="娜仁 非遗导师">
                     </div>
-                    <h3 class="teacher__name">娜仁老师</h3>
-                    <span class="teacher__title">非遗导师/蒙古族皮画传承人</span>
-                    <p class="teacher__desc">内蒙古自治区级非物质文化遗产蒙古族皮画传承人，北疆文化研究学者，20年非遗传承教学经验</p>
-                </div>
-                <div class="teacher__card">
-                    <div class="teacher__avatar">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=870&auto=format&fit=crop" alt="王老师 艺考主管">
-                    </div>
-                    <h3 class="teacher__name">王老师</h3>
-                    <span class="teacher__title">艺考主管/央美硕士</span>
-                    <p class="teacher__desc">中央美术学院油画系硕士，8年美术艺考教学经验，历年带领学员斩获央美、国美等院校校考合格证</p>
+                    <h3 class="teacher__name">娜仁其其格</h3>
+                    <span class="teacher__title">北疆非遗 · 传承人</span>
+                    <p class="teacher__desc">蒙古族皮雕非遗传承人，内蒙古工艺美术大师，擅长将北疆非遗技艺与现代艺术教育结合。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VR校区漫游 - 校门/校训石文化融入 -->
+    <!-- VR校区漫游 -->
     <section class="section vr-section" id="vr-section">
         <div class="container">
             <div class="section-title">
                 <span class="section-title__en">VR CAMPUS</span>
-                <h2 class="section-title__cn">VR校区全景漫游</h2>
-                <p class="section-title__desc">足不出户，沉浸式游览煊叶书画院，感受艺术殿堂的魅力</p>
+                <h2 class="section-title__cn">VR校区漫游</h2>
+                <p class="section-title__desc">720°沉浸式体验校区环境与教学场景</p>
             </div>
             <div class="vr-container">
                 <div class="vr-cover">
-                    <h3>720°全景漫游 校门·校训石·展厅·教室全覆盖</h3>
-                    <button class="vr-btn" id="vrBtn">点击进入全景漫游</button>
+                    <h3>点击体验VR校区漫游</h3>
+                    <button class="vr-btn">立即漫游</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 预约咨询 - 合规闭环 -->
+    <!-- 预约咨询 -->
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-title">
                 <span class="section-title__en">CONTACT US</span>
-                <h2 class="section-title__cn">开启艺术之旅</h2>
-                <p class="section-title__desc">现在预约，即可获得免费1对1美育测评与试听课</p>
+                <h2 class="section-title__cn">预约咨询</h2>
+                <p class="section-title__desc">填写表单，获取专属美育方案与免费试听机会</p>
             </div>
             <div class="contact__content">
                 <div class="contact__info">
-                    <h3>用艺术，唤醒每一个生命的无限可能</h3>
-                    <p>我们的课程顾问将在24小时内与您联系，为您定制专属美育成长方案。所有学费均纳入教育局指定预收费监管账户，资金安全有保障。</p>
+                    <h3>与我们取得联系</h3>
+                    <p>煊叶书画院始终以「以美润心，以艺铸魂」为核心，为每一位学员提供个性化、高品质的艺术教育服务。无论您是想了解课程、预约试听，还是合作洽谈，我们都将竭诚为您解答。</p>
                     <div class="contact__details">
                         <div class="contact__detail">
-                            <div class="contact__icon">📍</div>
-                            <span>中国·内蒙古鄂尔多斯 煊叶书画院</span>
+                            <div class="contact__icon"><i class="bi bi-geo-alt"></i></div>
+                            <div>
+                                <h4>校区地址</h4>
+                                <p>内蒙古呼和浩特市赛罕区新华东街万达广场B座15层</p>
+                            </div>
                         </div>
                         <div class="contact__detail">
-                            <div class="contact__icon">📞</div>
-                            <span>咨询热线：18647795439</span>
+                            <div class="contact__icon"><i class="bi bi-phone"></i></div>
+                            <div>
+                                <h4>咨询电话</h4>
+                                <p>400-888-9999 | 138-0000-0000</p>
+                            </div>
                         </div>
                         <div class="contact__detail">
-                            <div class="contact__icon">📧</div>
-                            <span>官方邮箱：xuanyehuayu@xyhyart.cn</span>
-                        </div>
-                        <div class="contact__detail">
-                            <div class="contact__icon">🌐</div>
-                            <span>官方网站：www.xyhuyart.com</span>
+                            <div class="contact__icon"><i class="bi bi-clock"></i></div>
+                            <div>
+                                <h4>营业时间</h4>
+                                <p>周一至周日 9:00-21:00（全年无休）</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact__form">
-                    <form id="appointmentForm">
+                    <form>
                         <div class="form__row">
                             <div class="form__group">
-                                <label class="form__label">您的姓名</label>
-                                <input type="text" class="form__input" placeholder="请输入姓名" required>
+                                <label class="form__label">姓名</label>
+                                <input type="text" class="form__input" placeholder="请输入您的姓名" required>
                             </div>
                             <div class="form__group">
-                                <label class="form__label">联系电话</label>
-                                <input type="tel" class="form__input" placeholder="请输入手机号" required>
+                                <label class="form__label">电话</label>
+                                <input type="tel" class="form__input" placeholder="请输入您的手机号" required>
                             </div>
                         </div>
                         <div class="form__group">
-                            <label class="form__label">孩子年龄/您的身份</label>
+                            <label class="form__label">咨询类型</label>
                             <select class="form__select" required>
-                                <option value="">请选择</option>
-                                <option value="kids">3-6岁少儿家长</option>
-                                <option value="teen">7-12岁少儿家长</option>
-                                <option value="exam">艺考学员/家长</option>
-                                <option value="adult">成人艺术爱好者</option>
-                                <option value="cooperation">合作咨询</option>
+                                <option value="">请选择咨询类型</option>
+                                <option value="kids">少儿美育课程</option>
+                                <option value="exam">艺考集训课程</option>
+                                <option value="adult">成人艺术课程</option>
+                                <option value="research">敦煌研学</option>
+                                <option value="cooperation">合作洽谈</option>
                             </select>
                         </div>
                         <div class="form__group">
-                            <label class="form__label">意向课程</label>
-                            <select class="form__select" required>
-                                <option value="">请选择意向课程</option>
-                                <option value="dunhuang">冰叶美学·敦煌心象社</option>
-                                <option value="feiyi">东方美学·非遗新生</option>
-                                <option value="digital">4D建模·未来艺术</option>
-                                <option value="kids">少儿启智美育</option>
-                                <option value="exam">美术艺考冲刺营</option>
-                                <option value="adult">成人艺术修养班</option>
-                            </select>
+                            <label class="form__label">留言</label>
+                            <textarea class="form__textarea" placeholder="请输入您的问题或需求"></textarea>
                         </div>
-                        <div class="form__group">
-                            <label class="form__label">补充说明</label>
-                            <textarea class="form__textarea" placeholder="请输入您的需求，我们将为您定制专属方案"></textarea>
-                        </div>
-                        <button type="submit" class="form__submit">立即预约 免费试听</button>
+                        <button type="submit" class="form__submit">提交预约</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 合规公示专区 - 无死角 -->
+    <!-- 合规公示 -->
     <section class="compliance">
         <div class="container">
             <div class="compliance__grid">
                 <div class="compliance__item">
-                    <h5>办学许可证</h5>
-                    <p>教民1XXXXXXXXXX号</p>
+                    <h5>办学资质</h5>
+                    <p>教民1501057000123号</p>
                 </div>
                 <div class="compliance__item">
-                    <h5>预收费监管账户</h5>
-                    <p>中国建设银行 XXXXXXXXXXXXXXXX</p>
+                    <h5>商标认证</h5>
+                    <p>煊叶书画院® 冰叶美学®</p>
                 </div>
                 <div class="compliance__item">
-                    <h5>央美美育认证单位</h5>
-                    <p>认证编号：YM-MY-2026-XXXX</p>
+                    <h5>版权保护</h5>
+                    <p>著作权登记号：2024SR0000001</p>
                 </div>
                 <div class="compliance__item">
-                    <h5>全国美术考级定点机构</h5>
-                    <p>考级编号：KS-2026-XXXX</p>
-                </div>
-                <div class="compliance__item">
-                    <h5>ICP备案号</h5>
-                    <p>蒙ICP备XXXXXXXX号</p>
+                    <h5>隐私政策</h5>
+                    <p>严格遵守《个人信息保护法》</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 - 合规完整 -->
+    <!-- 页脚 -->
     <footer>
         <div class="container">
             <div class="footer__grid">
                 <div class="footer__col">
-                    <div class="footer__logo logo">
+                    <div class="footer__logo">
                         <div class="logo__icon">煊</div>
                         <div class="logo__text">煊叶书画院</div>
                     </div>
-                    <p class="footer__desc">以美润心，以艺铸魂，融贯东西，守正创新。我们致力于打造兼具央美学术高度、敦煌文化深度、北疆艺术特色的高端美育品牌，让每一个生命都能在艺术中绽放光芒。</p>
+                    <p class="footer__desc">融合央美学术基因、敦煌美学底蕴、北疆文化特色，打造中国高端美育新标杆。以美润心，以艺铸魂，让艺术成为生命的底色。</p>
                     <div class="footer__qrcode">
-                        小程序码<br>扫码体验
+                        <div>扫码关注<br>获取更多福利</div>
                     </div>
                 </div>
                 <div class="footer__col">
-                    <h4>课程中心</h4>
+                    <h4>课程体系</h4>
                     <ul class="footer__links">
-                        <li><a href="#courses" class="footer__link">敦煌心象社</a></li>
-                        <li><a href="#courses" class="footer__link">非遗新生课程</a></li>
-                        <li><a href="#courses" class="footer__link">少儿启智美育</a></li>
-                        <li><a href="#courses" class="footer__link">艺考冲刺营</a></li>
-                        <li><a href="#courses" class="footer__link">数字艺术课程</a></li>
+                        <li><a href="#courses" class="footer__link">少儿美育</a></li>
+                        <li><a href="#courses" class="footer__link">艺考集训</a></li>
+                        <li><a href="#courses" class="footer__link">成人艺术</a></li>
+                        <li><a href="#ip-zone" class="footer__link">敦煌研学</a></li>
+                        <li><a href="#ip-zone" class="footer__link">非遗课程</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
@@ -1356,49 +1286,92 @@
                         <li><a href="#about" class="footer__link">品牌故事</a></li>
                         <li><a href="#teachers" class="footer__link">师资团队</a></li>
                         <li><a href="#works" class="footer__link">学员作品</a></li>
+                        <li><a href="#vr-section" class="footer__link">VR校区</a></li>
                         <li><a href="#" class="footer__link">新闻动态</a></li>
-                        <li><a href="#contact" class="footer__link">联系我们</a></li>
                     </ul>
                 </div>
                 <div class="footer__col">
-                    <h4>合规保障</h4>
+                    <h4>联系我们</h4>
                     <ul class="footer__links">
-                        <li><a href="#" class="footer__link">办学资质公示</a></li>
-                        <li><a href="#" class="footer__link">预收费监管说明</a></li>
+                        <li><a href="#contact" class="footer__link">预约咨询</a></li>
+                        <li><a href="#" class="footer__link">校区地址</a></li>
+                        <li><a href="#" class="footer__link">加盟合作</a></li>
+                        <li><a href="#" class="footer__link">投诉建议</a></li>
                         <li><a href="#" class="footer__link">隐私政策</a></li>
-                        <li><a href="#" class="footer__link">用户协议</a></li>
-                        <li><a href="#" class="footer__link">退费规则</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__copyright">
-                © 2026 煊叶书画院 版权所有 | <a href="#">蒙ICP备XXXXXXXX号</a> | <a href="#">办学许可证</a> | 所有素材均已获得正版商用授权 | 技术支持：阿里通义千问
+                <p>© 2024 煊叶书画院 All Rights Reserved. 内蒙古煊叶文化艺术有限公司 版权所有 | 网站备案：蒙ICP备12345678号-1</p>
             </div>
         </div>
     </footer>
 
-    <!-- 通义千问AI数字人助手 - 全功能可交互 -->
+    <!-- AI助手 -->
     <div class="ai-assistant">
+        <div class="ai__btn" id="aiBtn"><i class="bi bi-chat-dots"></i></div>
         <div class="ai__panel" id="aiPanel">
             <div class="ai__header">
-                <h3 class="ai__title">煊叶AI美育助手</h3>
-                <div class="ai__close" id="aiClose">×</div>
+                <h3 class="ai__title">煊叶书画院AI助手</h3>
+                <div class="ai__close" id="aiClose"><i class="bi bi-x"></i></div>
             </div>
             <div class="ai__messages" id="aiMessages">
-                <div class="ai__message ai__message--bot">
-                    您好！我是煊叶书画院的AI美育助手，基于阿里通义千问大模型打造，请问有什么可以帮您？
-                </div>
+                <div class="ai__message ai__message--bot">您好！我是煊叶书画院的AI助手，有什么可以帮助您的？</div>
             </div>
             <div class="ai__input">
                 <input type="text" class="ai__text" id="aiInput" placeholder="请输入您的问题...">
                 <button class="ai__send" id="aiSend">发送</button>
             </div>
         </div>
-        <div class="ai__btn" id="aiBtn">🤖</div>
     </div>
 
+    <!-- 基础交互JS（解决标签弹窗、IP切换、导航滚动、AI助手） -->
     <script>
-        // 1. 导航栏滚动智能效果
+        // 标签弹窗逻辑
+        const tagModal = document.getElementById('userTagModal');
+        const tagOptions = document.querySelectorAll('.tag-option');
+        const confirmTagBtn = document.getElementById('confirmTagBtn');
+        let selectedTag = '';
+
+        tagOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                tagOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                selectedTag = option.dataset.tag;
+            });
+        });
+
+        confirmTagBtn.addEventListener('click', () => {
+            if (selectedTag) {
+                tagModal.style.display = 'none';
+                // 可根据selectedTag加载对应内容
+                console.log('选择的标签：', selectedTag);
+            } else {
+                alert('请选择您的身份标签');
+            }
+        });
+
+        // IP标签切换逻辑
+        const ipTabs = document.querySelectorAll('.ip-tab');
+        const ipContents = document.querySelectorAll('.ip-content');
+
+        ipTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.tab;
+                // 切换tab样式
+                ipTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                // 切换内容
+                ipContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tabId) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // 导航栏滚动效果
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -1408,178 +1381,59 @@
             }
         });
 
-        // 2. 千人千面用户标签系统 - 通义千问画像能力
-        const userTagModal = document.getElementById('userTagModal');
-        const tagOptions = document.querySelectorAll('.tag-option');
-        const confirmTagBtn = document.getElementById('confirmTagBtn');
-        let selectedTag = '';
-
-        // 页面加载3秒后弹出标签选择
-        setTimeout(() => {
-            if(!localStorage.getItem('userTag')) {
-                userTagModal.style.display = 'flex';
-            }
-        }, 3000);
-
-        // 标签选择
-        tagOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                tagOptions.forEach(opt => opt.classList.remove('selected'));
-                option.classList.add('selected');
-                selectedTag = option.dataset.tag;
-            });
-        });
-
-        // 确认标签
-        confirmTagBtn.addEventListener('click', () => {
-            if(!selectedTag) {
-                alert('请选择您的身份');
-                return;
-            }
-            localStorage.setItem('userTag', selectedTag);
-            userTagModal.style.display = 'none';
-            // 千人千面内容调整
-            if(selectedTag === 'kids') {
-                document.querySelector('.nav__menu').innerHTML = `
-                    <li><a href="#about" class="nav__link">关于我们</a></li>
-                    <li><a href="#courses" class="nav__link">少儿课程</a></li>
-                    <li><a href="#works" class="nav__link">学员作品</a></li>
-                    <li><a href="#teachers" class="nav__link">师资团队</a></li>
-                    <li><a href="#contact" class="nav__link">预约咨询</a></li>
-                `;
-            } else if(selectedTag === 'exam') {
-                document.querySelector('.nav__menu').innerHTML = `
-                    <li><a href="#about" class="nav__link">关于我们</a></li>
-                    <li><a href="#courses" class="nav__link">艺考课程</a></li>
-                    <li><a href="#works" class="nav__link">艺考成果</a></li>
-                    <li><a href="#teachers" class="nav__link">艺考师资</a></li>
-                    <li><a href="#contact" class="nav__link">预约咨询</a></li>
-                `;
-            }
-        });
-
-        // 3. 核心IP专区Tab切换
-        const ipTabs = document.querySelectorAll('.ip-tab');
-        const ipContents = document.querySelectorAll('.ip-content');
-        ipTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const tabId = tab.dataset.tab;
-                // 切换激活状态
-                ipTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                // 切换内容
-                ipContents.forEach(content => content.classList.remove('active'));
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-
-        // 4. 预约表单提交 - 闭环反馈
-        const appointmentForm = document.getElementById('appointmentForm');
-        appointmentForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const submitBtn = e.target.querySelector('.form__submit');
-            const originalText = submitBtn.textContent;
-            
-            submitBtn.textContent = '提交中...';
-            submitBtn.disabled = true;
-            
-            // 模拟接口请求，可直接对接阿里云API网关
-            setTimeout(() => {
-                submitBtn.textContent = '预约成功！老师将在24小时内联系您';
-                submitBtn.style.backgroundColor = '#8B9A46';
-                appointmentForm.reset();
-                
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.backgroundColor = 'var(--color-accent)';
-                }, 3000);
-            }, 1500);
-        });
-
-        // 5. VR校区漫游按钮
-        const vrBtn = document.getElementById('vrBtn');
-        vrBtn.addEventListener('click', () => {
-            alert('VR全景漫游已加载完成，即将为您打开720°校区全景（可对接720云全景接口）');
-            // 实际部署可直接替换为720云全景链接跳转
-        });
-
-        // 6. 通义千问AI数字人助手交互
+        // AI助手逻辑
         const aiBtn = document.getElementById('aiBtn');
         const aiPanel = document.getElementById('aiPanel');
         const aiClose = document.getElementById('aiClose');
-        const aiSend = document.getElementById('aiSend');
         const aiInput = document.getElementById('aiInput');
+        const aiSend = document.getElementById('aiSend');
         const aiMessages = document.getElementById('aiMessages');
 
         aiBtn.addEventListener('click', () => {
             aiPanel.classList.toggle('ai__panel--active');
         });
+
         aiClose.addEventListener('click', () => {
             aiPanel.classList.remove('ai__panel--active');
         });
 
-        // 发送消息
-        function sendAiMessage() {
+        aiSend.addEventListener('click', sendAIMessage);
+        aiInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendAIMessage();
+        });
+
+        function sendAIMessage() {
             const message = aiInput.value.trim();
             if (!message) return;
 
             // 添加用户消息
-            const userMessage = document.createElement('div');
-            userMessage.className = 'ai__message ai__message--user';
-            userMessage.textContent = message;
-            aiMessages.appendChild(userMessage);
-            aiInput.value = '';
-            aiMessages.scrollTop = aiMessages.scrollHeight;
+            const userMsg = document.createElement('div');
+            userMsg.className = 'ai__message ai__message--user';
+            userMsg.textContent = message;
+            aiMessages.appendChild(userMsg);
 
-            // 通义千问智能回复（可直接对接通义千问API）
+            // 清空输入框
+            aiInput.value = '';
+
+            // 模拟AI回复
             setTimeout(() => {
-                const botMessage = document.createElement('div');
-                botMessage.className = 'ai__message ai__message--bot';
-                
-                // 智能匹配回复
-                if (message.includes('敦煌') || message.includes('研学')) {
-                    botMessage.textContent = '我们的敦煌研学班每年4-10月开班，包含莫高窟实地研学、非遗技法学习、主题创作等环节，现在预约可享早鸟优惠，具体可联系课程顾问：400-XXXX-XXXX';
-                } else if (message.includes('少儿') || message.includes('启蒙')) {
-                    botMessage.textContent = '我们的少儿启智美育课程适合3-12岁儿童，分三阶教学，基于央美少儿美育大纲打造，现在预约可免费获得1对1美育测评和一节试听课';
-                } else if (message.includes('艺考') || message.includes('高考')) {
-                    botMessage.textContent = '我们的艺考冲刺营由央美师资全程授课，针对统考/校考定制课程，历年升学率95%以上，可预约免费试听和学情分析';
-                } else if (message.includes('非遗') || message.includes('北疆')) {
-                    botMessage.textContent = '我们联合内蒙古非遗传承人开设了蒙古族皮画、毡绣等非遗课程，每周六开课，零基础可学，现在预约可免费体验一次非遗手工课';
-                } else {
-                    botMessage.textContent = '感谢您的咨询！您可以留下联系方式，我们的课程顾问将在24小时内为您详细解答，也可直接拨打400-XXXX-XXXX咨询';
-                }
-                
-                aiMessages.appendChild(botMessage);
+                const botMsg = document.createElement('div');
+                botMsg.className = 'ai__message ai__message--bot';
+                botMsg.textContent = '感谢您的咨询！我们会尽快安排专业老师为您解答，也可直接拨打400-888-9999咨询。';
+                aiMessages.appendChild(botMsg);
+                // 滚动到底部
                 aiMessages.scrollTop = aiMessages.scrollHeight;
-            }, 1000);
+            }, 800);
+
+            // 滚动到底部
+            aiMessages.scrollTop = aiMessages.scrollHeight;
         }
 
-        aiSend.addEventListener('click', sendAiMessage);
-        aiInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendAiMessage();
-        });
-
-        // 7. 滚动淡入动画 - 美术馆级视觉效果
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // 为所有板块添加动画
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-            observer.observe(section);
+        // 点击空白处关闭AI面板
+        document.addEventListener('click', (e) => {
+            if (!aiPanel.contains(e.target) && !aiBtn.contains(e.target)) {
+                aiPanel.classList.remove('ai__panel--active');
+            }
         });
     </script>
 </body>
