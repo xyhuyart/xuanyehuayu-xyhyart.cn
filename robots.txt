@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+
+# 禁止抓取和收录后台文件、图片尺寸文件、无关目录
 Disallow: /admin/
+Disallow: /assets/images/resize/
+Disallow: /*.log$
+Disallow: /*.php$
+
+# 提交你的站点地图
 Sitemap: https://www.xyhuyart.com/sitemap.xml
